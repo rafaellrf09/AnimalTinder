@@ -14,7 +14,7 @@ export class AnimalService {
     }
 
     async createAnimal(createAnimalDto: CreateAnimalDto): Promise<Animal> {
-        const { latitude, longitude, name, animal_type , breed, age , image_url } = createAnimalDto;
+        const { latitude, longitude, name, animal_type , breed, age , image_url, genre } = createAnimalDto;
         
         const location = {
             type: 'Point',
@@ -25,11 +25,12 @@ export class AnimalService {
             name,
             animal_type,
             breed,
+            genre,
             age,
             image_url,
             location
         })
-        return newAnimal;
+        return newAnimal.save();
 
     }
 

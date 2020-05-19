@@ -5,6 +5,7 @@ export const AnimalSchema = new mongoose.Schema({
     name: String,
     animal_type : String,
     breed: String,
+    genre: String,
     age: Number,
     image_url: String,
     location: {

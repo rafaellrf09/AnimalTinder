@@ -11,6 +11,8 @@ export class CreateAnimalDto {
     @IsNotEmpty()
     breed: string;
 
+    genre: string;
+
     animal_type : String
 
     image_url: string;
